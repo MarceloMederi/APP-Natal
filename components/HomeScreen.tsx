@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 const HomeScreen = ({ navigation }: any) => {
   const dates = [
@@ -16,16 +16,21 @@ const HomeScreen = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       {dates.map((date, index) => (
-        <View key={index} style={styles.buttonContainer}>
-          <Button
-            title={date}
-            onPress={() => navigation.navigate('Detail', { date })}
-          />
-        </View>
+        <TouchableOpacity
+          key={index}
+          style={styles.button}
+          onPress={() => navigation.navigate('Detail', { date })}
+        >
+          <Text style={styles.buttonText}>{date}</Text>
+        </TouchableOpacity>
       ))}
-      <View style={styles.buttonContainer}>
-        <Button title="Logout" onPress={() => navigation.navigate('Login')} />
-      </View>
+      {/* Botão de Logout */}
+      <TouchableOpacity
+        style={[styles.button, styles.logoutButton]}
+        onPress={() => navigation.navigate('Login')}
+      >
+        <Text style={styles.logoutText}>Logout</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -33,12 +38,31 @@ const HomeScreen = ({ navigation }: any) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'center', // Centraliza os botões verticalmente
+    alignItems: 'center', // Centraliza os botões horizontalmente
+    padding: 20,
+    backgroundColor: '#f5f5f5',
+  },
+  button: {
+    backgroundColor: '#007BFF',
+    padding: 15,
+    marginVertical: 10, // Espaçamento entre os botões
+    borderRadius: 8,
+    width: '80%', // Largura do botão
     alignItems: 'center',
   },
-  buttonContainer: {
-    marginVertical: 10, // Espaçamento vertical entre os botões
-    width: '20%', // Define largura dos botões para melhorar a estética
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  logoutButton: {
+    backgroundColor: '#FF4D4D', // Cor de fundo do botão Logout
+  },
+  logoutText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 

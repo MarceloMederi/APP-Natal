@@ -10,14 +10,17 @@ const DetailScreen = ({ route }: any) => {
   if (!itinerary) {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Nenhum itinerário definido para {date}.</Text>
+        <Text style={styles.errorText}>
+          Nenhum itinerário definido para {date}.
+        </Text>
       </View>
     );
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{itinerary.text}</Text>
+      <Text style={styles.title}>{date}</Text>
+      <Text style={styles.description}>{itinerary.text}</Text>
       <Image source={itinerary.image} style={styles.image} />
     </View>
   );
@@ -65,16 +68,35 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+    backgroundColor: '#f5f5f5',
   },
-  text: {
-    fontSize: 18,
-    marginBottom: 20,
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 10,
+  },
+  description: {
+    fontSize: 16,
+    color: '#666',
     textAlign: 'center',
+    marginBottom: 20,
+    paddingHorizontal: 10,
   },
   image: {
-    width: 200,
-    height: 200,
-    resizeMode: 'contain',
+    width: 250,
+    height: 250,
+    borderRadius: 10, // Bordas arredondadas
+    resizeMode: 'cover',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+  },
+  errorText: {
+    fontSize: 18,
+    color: '#FF0000',
+    textAlign: 'center',
   },
 });
 
