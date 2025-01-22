@@ -9,17 +9,17 @@ const DateButton = ({ date, onPress }: { date: string; onPress: () => void }) =>
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#007BFF', // Cor de fundo azul
-    paddingVertical: 15, // Espaçamento vertical interno
-    paddingHorizontal: 20, // Espaçamento horizontal interno
-    marginVertical: 10, // Espaçamento entre os botões
-    borderRadius: 8, // Bordas arredondadas
-    alignItems: 'center', // Centralizar o texto no botão
+    backgroundColor: '#64748B', 
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    marginVertical: 10,
+    borderRadius: 8,
+    alignItems: 'center',
   },
   buttonText: {
-    color: '#FFFFFF', // Cor do texto branco
-    fontSize: 16, // Tamanho da fonte
-    fontWeight: 'bold', // Negrito
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 

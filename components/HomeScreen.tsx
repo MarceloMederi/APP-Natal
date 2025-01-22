@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center', // Centraliza os botões verticalmente
     alignItems: 'center', // Centraliza os botões horizontalmente
     padding: 20,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#64748B',
   },
   button: {
     backgroundColor: '#007BFF',
