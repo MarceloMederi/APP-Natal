@@ -12,7 +12,7 @@ const LoginScreen = ({ navigation }: any) => {
 
     if (username === validUsername && password === validPassword) {
       setErrorMessage('');
-      navigation.navigate('Home');
+      navigation.navigate('Inicio');
     } else {
       setErrorMessage('Usuário ou senha inválidos!');
     }

@@ -19,7 +19,7 @@ const HomeScreen = ({ navigation }: any) => {
         <TouchableOpacity
           key={index}
           style={styles.button}
-          onPress={() => navigation.navigate('Detail', { date })}
+          onPress={() => navigation.navigate('Detalhes', { date })}
         >
           <Text style={styles.buttonText}>{date}</Text>
         </TouchableOpacity>
