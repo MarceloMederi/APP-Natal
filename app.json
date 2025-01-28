@@ -4,25 +4,26 @@
     "slug": "expo-travel-itinerary",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/teste.png",
+    "icon": "./assets/travel.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/teste.png",
+      "image": "./assets/travel.png",
       "resizeMode": "cover",
-      "backgroundColor": "#64748B"
+      "backgroundColor": "#EDF7EF"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/teste.png",
-        "backgroundColor": "#4A90E2"
+        "foregroundImage": "./assets/travel.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#EDF7EF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/travel.png"
     }
   }
 }

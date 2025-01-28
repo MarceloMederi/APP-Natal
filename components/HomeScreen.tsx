@@ -41,10 +41,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center', // Centraliza os botões verticalmente
     alignItems: 'center', // Centraliza os botões horizontalmente
     padding: 20,
-    backgroundColor: '#64748B',
+    backgroundColor: '#EDF7EF',
   },
   button: {
-    backgroundColor: '#007BFF',
+    backgroundColor: '#059669',
     padding: 15,
     marginVertical: 10, // Espaçamento entre os botões
     borderRadius: 8,
