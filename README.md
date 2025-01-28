@@ -24,9 +24,14 @@ expo-travel-itinerary/
 │   └── DetailScreen.js  # Tela que exibe o conteúdo da data selecionada
 ├── navigation/
 │   └── AppNavigator.js  # Configuração de navegação entre telas
+├── app.json
+├── app.tsx
+├── eas.json
+├── index.ts
+├── package-lock.json
 ├── package.json
 ├── README.md
-└── app.json
+└── tsconfig.json
 ```
 
 ---
@@ -118,7 +123,67 @@ expo start
 
 ---
 
-## Personalização Futuras
-- Implementar autenticação com backend (Firebase, etc.).
-- Adicionar conteúdo dinâmico (textos e imagens) para as datas.
-- Melhorar a UI com bibliotecas como React Native Paper ou Styled Components.
+## Build do Aplicativo Android
+
+Faça o login na Expo caso não tenha feito.
+
+```bash
+expo login
+```
+
+## Instalar o EAS CLI
+
+```bash
+npm install -g eas-cli
+```
+
+## Inicialize o EAS Build no projeto
+
+```bash
+eas build:configure
+```
+## Criar a Build Android
+
+Para gerar um APK (para testes locais) ou AAB (para publicação na Google Play Store)
+
+```bash
+eas build -p android
+```
+
+## Baixar e Testar o APK
+
+Após a conclusão do build, você receberá um link para baixar o APK ou AAB.
+
+Para APK:
+
+- Baixe o arquivo para seu computador.
+- Transfira para o dispositivo Android (via USB ou link).
+- Ative a instalação de fontes desconhecidas no dispositivo e instale o APK.
+
+Para AAB:
+
+- Acesse o Google Play Console.
+- Envie o AAB para o canal de teste interno ou produção.
+
+## Caso queira um APK de development usar o comando abaixo
+Inclui ferramentas para testes e desenvolvimento (como conexão com o Expo Go e debug remoto).
+Não é destinado a ser um app independente ou para distribuição.
+
+```bash
+eas build -p android --profile development
+```
+
+## Caso queira um APK de produção o comando abaixo
+Cria uma build standalone (APK ou AAB) que funciona como um aplicativo completo e não depende do Expo Go.
+Destinado a ser um app independente ou para distribuição.
+
+```bash
+eas build -p android --profile preview
+```
+
+## Gerar AAB para Publicação
+Se você pretende publicar o app na Google Play Store, use o comando:
+
+```bash
+eas build -p android --profile production
+```

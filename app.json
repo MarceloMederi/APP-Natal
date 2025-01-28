@@ -19,10 +19,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/travel.png",
         "backgroundColor": "#EDF7EF"
-      }
+      },
+      "package": "com.marcelomederi11.expotravelitinerary"
     },
     "web": {
       "favicon": "./assets/travel.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bca3a902-a11a-4261-9d96-4126046a92da"
+      }
     }
   }
 }
