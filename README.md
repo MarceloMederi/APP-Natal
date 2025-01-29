@@ -40,7 +40,7 @@ expo-travel-itinerary/
 ├── README.md
 └── tsconfig.json
 ```
-```
+
 
 ## Pré-requisitos
 Certifique-se de ter o Expo CLI instalado no seu sistema:
