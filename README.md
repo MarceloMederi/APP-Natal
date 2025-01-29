@@ -3,9 +3,10 @@
 ## Descrição
 Este é um aplicativo desenvolvido com Expo que apresenta as seguintes funcionalidades:
 - Tela de login com autenticação de usuário e senha.
-- Após o login, uma tela com 8 botões é exibida:
+- Após o login, uma tela com 10 botões é exibida:
   - Um botão para deslogar do aplicativo.
-  - Sete botões representando as datas de 23/08 a 30/08.
+  - Oito botões representando as datas de 23/08 a 30/08.
+  - Um botão para localização das praias e hotel
 - Ao clicar em um botão de data, é exibido um texto ou imagem relacionado à data selecionada (conteúdo a ser definido).
 
 ---
@@ -17,13 +18,19 @@ expo-travel-itinerary/
 ├── App.js
 ├── assets/
 │   └── images/  # Pasta para armazenar imagens relacionadas às datas
+│
 ├── components/
 │   ├── DateButton.js  # Componente de botão para cada data
-│   ├── LoginScreen.js  # Tela de login
-│   ├── HomeScreen.js  # Tela principal com os botões
-│   └── DetailScreen.js  # Tela que exibe o conteúdo da data selecionada
+│
 ├── navigation/
 │   └── AppNavigator.js  # Configuração de navegação entre telas
+│
+├── screens/
+│   ├── LoginScreen.js  # Tela de login
+│   ├── HomeScreen.js  # Tela principal com os botões
+│   ├── DetailScreen.js  # Tela que exibe o conteúdo da data selecionada
+│   └── LoginScreen.tsx # Tela que exibe as localizaçoes do itinerario
+│
 ├── app.json
 ├── app.tsx
 ├── eas.json
@@ -33,8 +40,7 @@ expo-travel-itinerary/
 ├── README.md
 └── tsconfig.json
 ```
-
----
+```
 
 ## Pré-requisitos
 Certifique-se de ter o Expo CLI instalado no seu sistema:

@@ -2,9 +2,10 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import LoginScreen from '../components/LoginScreen';
-import HomeScreen from '../components/HomeScreen';
-import DetailScreen from '../components/DetailScreen';
+import LoginScreen from '../screens/LoginScreen';
+import HomeScreen from '../screens/HomeScreen';
+import DetailScreen from '../screens/DetailScreen';
+import LocationScreen from '../screens/LocationScreen'; 
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ const AppNavigator = () => {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Inicio" component={HomeScreen} />
         <Stack.Screen name="Detalhes" component={DetailScreen} />
+        <Stack.Screen name="Localizacao" component={LocationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

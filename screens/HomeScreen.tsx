@@ -11,7 +11,16 @@ const HomeScreen = ({ navigation }: any) => {
     '28/08',
     '29/08',
     '30/08',
+    'Localização'
   ];
+
+  const handlePress = (date: string) => {
+    if (date === 'Localização') {
+      navigation.navigate('Localizacao'); // Navega para a tela de Localização
+    } else {
+      navigation.navigate('Detalhes', { date }); // Navega para Detalhes normalmente
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -19,7 +28,7 @@ const HomeScreen = ({ navigation }: any) => {
         <TouchableOpacity
           key={index}
           style={styles.button}
-          onPress={() => navigation.navigate('Detalhes', { date })}
+          onPress={() => handlePress(date)}
         >
           <Text style={styles.buttonText}>{date}</Text>
         </TouchableOpacity>
@@ -38,17 +47,17 @@ const HomeScreen = ({ navigation }: any) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center', // Centraliza os botões verticalmente
-    alignItems: 'center', // Centraliza os botões horizontalmente
+    justifyContent: 'center',
+    alignItems: 'center',
     padding: 20,
     backgroundColor: '#EDF7EF',
   },
   button: {
     backgroundColor: '#059669',
     padding: 15,
-    marginVertical: 10, // Espaçamento entre os botões
+    marginVertical: 10,
     borderRadius: 8,
-    width: '80%', // Largura do botão
+    width: '80%',
     alignItems: 'center',
   },
   buttonText: {
@@ -57,7 +66,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   logoutButton: {
-    backgroundColor: '#FF4D4D', // Cor de fundo do botão Logout
+    backgroundColor: '#FF4D4D',
   },
   logoutText: {
     color: '#FFFFFF',
