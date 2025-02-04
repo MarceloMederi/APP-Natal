@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text, StyleSheet, Linking } from 'react-native'
 
 const locations: { [key: string]: string } = {
   'Aeroporto': 'https://www.google.com/maps?q=-5.768689653184387,-35.366061277387644',
-  'Hotel': 'https://www.google.com/maps?q=-5.872707039137344,-35.180338772337024',
+  'Hotel': 'https://www.google.com/maps?q=-5.872718694362415,-35.18036230082013',
 };
 
 const LocationScreen = ({ navigation }: any) => {
