@@ -2,13 +2,8 @@ import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Linking } from 'react-native';
 
 const locations: { [key: string]: string } = {
-  'Hotel': 'https://www.google.com/maps?q=-12.9794,-38.4581',
-  'Praia do Forte': 'https://www.google.com/maps?q=-12.5663,-37.9985',
-  'Centro Histórico': 'https://www.google.com/maps?q=-12.9714,-38.5124',
-  'Mergulho e Aventura': 'https://www.google.com/maps?q=-12.574,-37.995',
-  'Trilhas e Cachoeiras': 'https://www.google.com/maps?q=-12.4000,-37.2000',
-  'Restaurante': 'https://www.google.com/maps?q=-12.9766,-38.5016',
-  'Parque Natural': 'https://www.google.com/maps?q=-12.5000,-37.5000',
+  'Aeroporto': 'https://www.google.com/maps?q=-5.768689653184387,-35.366061277387644',
+  'Hotel': 'https://www.google.com/maps?q=-5.872707039137344,-35.180338772337024',
 };
 
 const LocationScreen = ({ navigation }: any) => {
