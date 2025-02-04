@@ -6,7 +6,7 @@ Este é um aplicativo desenvolvido com Expo que apresenta as seguintes funcional
 - Após o login, uma tela com 10 botões é exibida:
   - Um botão para deslogar do aplicativo.
   - Oito botões representando as datas de 23/08 a 30/08.
-  - Um botão para localização das praias e hotel
+  - Um botão para localização das praias, hotel e aeroporto-RN
 - Ao clicar em um botão de data, é exibido um texto ou imagem relacionado à data selecionada (conteúdo a ser definido).
 
 ---
@@ -83,22 +83,25 @@ expo install react-native-gesture-handler react-native-reanimated react-native-s
 ### 4. Criar Componentes
 
 #### 4.1 Tela de Login
-Crie o arquivo `LoginScreen.js` em `components/` e implemente o formulário de login.
+Crie o arquivo `LoginScreen.tsx` em `screens/` e implemente o formulário de login.
 
 #### 4.2 Tela Principal
-Crie o arquivo `HomeScreen.js` em `components/` para exibir os botões das datas e o botão de logout.
+Crie o arquivo `HomeScreen.tsx` em `screens/` para exibir os botões das datas e o botão de logout.
 
 #### 4.3 Tela de Detalhes
-Crie o arquivo `DetailScreen.js` em `components/` para exibir o texto ou imagem correspondente à data.
+Crie o arquivo `DetailScreen.tsx` em `screens/` para exibir o texto ou imagem correspondente à data.
 
-#### 4.4 Componente de Botão de Data
-Crie o arquivo `DateButton.js` em `components/` para facilitar a reutilização de botões.
+#### 4.4 Componente de Botão de Localização
+Crie o arquivo `LocationScreen.tsx` em `screens/` para exibir as localizações no mapa.
+
+### 4.5 Componente de Botão de Data
+Crie o arquivo `DateButton.tsx` em `components/` para facilitar a reutilização de botões.
 
 ### 5. Configurar Navegação
-Crie o arquivo `AppNavigator.js` em `navigation/` para configurar as rotas de navegação usando `react-navigation`.
+Crie o arquivo `AppNavigator.tsx` em `navigation/` para configurar as rotas de navegação usando `react-navigation`.
 
 ### 6. Configurar o Arquivo Principal
-No arquivo `App.js`, importe e configure o `AppNavigator`.
+No arquivo `App.tsx`, importe e configure o `AppNavigator`.
 
 ---
 
@@ -121,11 +124,11 @@ npm start -- --reset-cache
    - Faça a validação (básica ou simulada, sem backend).
 
 2. Tela Principal:
-   - Exibe os botões das datas.
+   - Exibe os botões das datas e localização.
    - Inclui um botão de logout para retornar à tela de login.
 
 3. Tela de Detalhes:
-   - Exibe texto ou imagem baseado na data selecionada.
+   - Exibe texto ou imagem baseado na data selecionada e a localização.
 
 ---
 
