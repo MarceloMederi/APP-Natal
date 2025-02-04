@@ -20,15 +20,15 @@ expo-travel-itinerary/
 │   └── images/  # Pasta para armazenar imagens relacionadas às datas
 │
 ├── components/
-│   ├── DateButton.js  # Componente de botão para cada data
+│   ├── DateButton.tsx  # Componente de botão para cada data
 │
 ├── navigation/
-│   └── AppNavigator.js  # Configuração de navegação entre telas
+│   └── AppNavigator.tsx  # Configuração de navegação entre telas
 │
 ├── screens/
-│   ├── LoginScreen.js  # Tela de login
-│   ├── HomeScreen.js  # Tela principal com os botões
-│   ├── DetailScreen.js  # Tela que exibe o conteúdo da data selecionada
+│   ├── LoginScreen.tsx  # Tela de login
+│   ├── HomeScreen.tsx  # Tela principal com os botões
+│   ├── DetailScreen.tsx  # Tela que exibe o conteúdo da data selecionada
 │   └── LocationScreen.tsx # Tela que exibe as localizaçoes do itinerario
 │
 ├── app.json
