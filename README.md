@@ -107,7 +107,7 @@ No arquivo `App.js`, importe e configure o `AppNavigator`.
 ### 1. Iniciar o Servidor Expo
 
 ```bash
-expo start
+npm start -- --reset-cache
 ```
 
 ### 2. Rodar no Dispositivo ou Emulador
