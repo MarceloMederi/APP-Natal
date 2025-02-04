@@ -29,7 +29,7 @@ expo-travel-itinerary/
 │   ├── LoginScreen.js  # Tela de login
 │   ├── HomeScreen.js  # Tela principal com os botões
 │   ├── DetailScreen.js  # Tela que exibe o conteúdo da data selecionada
-│   └── LoginScreen.tsx # Tela que exibe as localizaçoes do itinerario
+│   └── LocationScreen.tsx # Tela que exibe as localizaçoes do itinerario
 │
 ├── app.json
 ├── app.tsx
