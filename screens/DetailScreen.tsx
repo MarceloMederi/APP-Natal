@@ -20,45 +20,36 @@ const DetailScreen = ({ route }: any) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{date}</Text>
-      <Text style={styles.description}>{itinerary.text}</Text>
       <Image source={itinerary.image} style={styles.image} />
     </View>
   );
 };
 
 // Objeto de itinerários
-const itineraries: { [key: string]: { text: string; image: any } } = {
+const itineraries: { [key: string]: {image: any } } = {
   '23/08': {
-    text: 'Passeio pela Praia do Forte.',
-    image: require('../assets/images/download.jpg'),
+    image: require('../assets/images/dia-01.jpg'),
   },
   '24/08': {
-    text: 'Visita ao Centro Histórico.',
-    image: require('../assets/images/download.jpg'),
+    image: require('../assets/images/dia-02.jpg'),
   },
   '25/08': {
-    text: 'Dia de mergulho e aventura.',
-    image: require('../assets/images/download.jpg'),
+    image: require('../assets/images/dia-03.jpg'),
   },
   '26/08': {
-    text: 'Exploração de trilhas e cachoeiras.',
-    image: require('../assets/images/download.jpg'),
+    image: require('../assets/images/dia-04.jpg'),
   },
   '27/08': {
-    text: 'Exploração de trilhas e cachoeiras.',
-    image: require('../assets/images/download.jpg'),
+    image: require('../assets/images/dia-05.jpg'),
   },
   '28/08': {
-    text: 'Exploração de trilhas e cachoeiras.',
-    image: require('../assets/images/download.jpg'),
+    image: require('../assets/images/dia-06.jpg'),
   },
   '29/08': {
-    text: 'Exploração de trilhas e cachoeiras.',
-    image: require('../assets/images/download.jpg'),
+    image: require('../assets/images/dia-07.jpg'),
   },
   '30/08': {
-    text: 'Exploração de trilhas e cachoeiras.',
-    image: require('../assets/images/download.jpg'),
+    image: require('../assets/images/dia-08.jpg'),
   },
 };
 
@@ -68,7 +59,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#EDF7EF',
+    backgroundColor: '#077DB8',
   },
   title: {
     fontSize: 24,
@@ -84,8 +75,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   image: {
-    width: 250,
-    height: 250,
+    width: 1080,
+    height: 1920,
     borderRadius: 10, // Bordas arredondadas
     resizeMode: 'cover',
     shadowColor: '#000',

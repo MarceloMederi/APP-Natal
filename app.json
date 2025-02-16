@@ -4,26 +4,26 @@
     "slug": "expo-travel-itinerary",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/travel.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/travel.png",
+      "image": "./assets/images/capa.png",
       "resizeMode": "cover",
-      "backgroundColor": "#EDF7EF"
+      "backgroundColor": "#077DB8"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/travel.png",
-        "backgroundColor": "#EDF7EF"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#077DB8"
       },
       "package": "com.marcelomederi11.expotravelitinerary"
     },
     "web": {
-      "favicon": "./assets/travel.png"
+      "favicon": "./assets/icon.png"
     },
     "extra": {
       "eas": {
