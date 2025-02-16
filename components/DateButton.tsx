@@ -9,7 +9,7 @@ const DateButton = ({ date, onPress }: { date: string; onPress: () => void }) =>
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#059669', 
+    backgroundColor: '#FFBD59', 
     paddingVertical: 15,
     paddingHorizontal: 20,
     marginVertical: 10,
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
   },
 });

@@ -38,7 +38,7 @@ const HomeScreen = ({ navigation }: any) => {
         style={[styles.button, styles.logoutButton]}
         onPress={() => navigation.navigate('Login')}
       >
-        <Text style={styles.logoutText}>Logout</Text>
+        <Text style={styles.logoutText}>Sair do App</Text>
       </TouchableOpacity>
     </View>
   );
@@ -50,10 +50,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#EDF7EF',
+    backgroundColor: '#077DB8',
   },
   button: {
-    backgroundColor: '#059669',
+    backgroundColor: '#F8BB3B',
     padding: 15,
     marginVertical: 10,
     borderRadius: 8,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
   },
   logoutButton: {
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   },
   logoutText: {
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
   },
 });

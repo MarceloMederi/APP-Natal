@@ -19,7 +19,6 @@ const DetailScreen = ({ route }: any) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{date}</Text>
       <Image source={itinerary.image} style={styles.image} />
     </View>
   );
@@ -58,25 +57,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
     backgroundColor: '#077DB8',
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 10,
-  },
-  description: {
-    fontSize: 16,
-    color: '#333',
-    textAlign: 'center',
-    marginBottom: 20,
-    paddingHorizontal: 10,
-  },
   image: {
-    width: 1080,
-    height: 1920,
+    width: 378,
+    height: 672,
     borderRadius: 10, // Bordas arredondadas
     resizeMode: 'cover',
     shadowColor: '#000',
