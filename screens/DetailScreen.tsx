@@ -28,28 +28,28 @@ const DetailScreen = ({ route }: any) => {
 // Objeto de itinerários
 const itineraries: { [key: string]: {image: any } } = {
   '23/08': {
-    image: require('../assets/images/dia-01.jpg'),
+    image: require('../assets/images/dia-01.png'),
   },
   '24/08': {
-    image: require('../assets/images/dia-02.jpg'),
+    image: require('../assets/images/dia-02.png'),
   },
   '25/08': {
-    image: require('../assets/images/dia-03.jpg'),
+    image: require('../assets/images/dia-03.png'),
   },
   '26/08': {
-    image: require('../assets/images/dia-04.jpg'),
+    image: require('../assets/images/dia-04.png'),
   },
   '27/08': {
-    image: require('../assets/images/dia-05.jpg'),
+    image: require('../assets/images/dia-05.png'),
   },
   '28/08': {
-    image: require('../assets/images/dia-06.jpg'),
+    image: require('../assets/images/dia-06.png'),
   },
   '29/08': {
-    image: require('../assets/images/dia-07.jpg'),
+    image: require('../assets/images/dia-07.png'),
   },
   '30/08': {
-    image: require('../assets/images/dia-08.jpg'),
+    image: require('../assets/images/dia-08.png'),
   },
 };
 
