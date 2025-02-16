@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   logoutButton: {
-    backgroundColor: '#FF4D4D',
+    backgroundColor: '#FF7F50',
   },
   logoutText: {
     color: '#FFFFFF',
