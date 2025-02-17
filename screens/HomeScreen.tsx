@@ -36,9 +36,9 @@ const HomeScreen = ({ navigation }: any) => {
       {/* Botão de Logout */}
       <TouchableOpacity
         style={[styles.button, styles.logoutButton]}
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => navigation.goBack()}
       >
-        <Text style={styles.logoutText}>Sair do App</Text>
+        <Text style={styles.logoutText}>Voltar</Text>
       </TouchableOpacity>
     </View>
   );
