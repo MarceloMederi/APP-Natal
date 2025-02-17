@@ -6,6 +6,7 @@ import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
 import LocationScreen from '../screens/LocationScreen'; 
+import SelectionScreen from '../screens/SelectionScreen';
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Selecao" component={SelectionScreen} options={{ title: 'Escolha uma Opção' }} />
         <Stack.Screen name="Inicio" component={HomeScreen} />
         <Stack.Screen name="Detalhes" component={DetailScreen} />
         <Stack.Screen name="Localizacao" component={LocationScreen} />
