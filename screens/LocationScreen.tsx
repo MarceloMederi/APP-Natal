@@ -10,6 +10,7 @@ const LocationScreen = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Escolha uma localização:</Text>
+
       {Object.keys(locations).map((place, index) => (
         <TouchableOpacity
           key={index}
@@ -19,7 +20,12 @@ const LocationScreen = ({ navigation }: any) => {
           <Text style={styles.buttonText}>{place}</Text>
         </TouchableOpacity>
       ))}
-      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+
+      {/* Botão para voltar */}
+      <TouchableOpacity
+        style={[styles.button, styles.backButton]}
+        onPress={() => navigation.goBack()}
+      >
         <Text style={styles.backButtonText}>Voltar</Text>
       </TouchableOpacity>
     </View>
@@ -32,16 +38,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#EDF7EF',
+    backgroundColor: '#077DB8', // Azul escuro
   },
   title: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#FFFFFF', // Texto branco
     marginBottom: 15,
   },
   button: {
-    backgroundColor: '#059669',
+    backgroundColor: '#F8BB3B', // Amarelo
     padding: 15,
     marginVertical: 10,
     borderRadius: 8,
@@ -50,20 +56,15 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
   },
   backButton: {
-    marginTop: 20,
-    backgroundColor: '#059669',
-    padding: 12,
-    borderRadius: 8,
-    width: '50%',
-    alignItems: 'center',
+    backgroundColor: '#FF7F50', // Laranja para botão de voltar
   },
   backButtonText: {
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
   },
 });
