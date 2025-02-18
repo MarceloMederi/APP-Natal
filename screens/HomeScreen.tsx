@@ -3,14 +3,14 @@ import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 const HomeScreen = ({ navigation }: any) => {
   const dates = [
-    '23/08',
-    '24/08',
-    '25/08',
-    '26/08',
-    '27/08',
-    '28/08',
-    '29/08',
-    '30/08',
+    '23/08 - Sábado',
+    '24/08 - Domingo',
+    '25/08 - Segunda',
+    '26/08 - Terça',
+    '27/08 - Quarta',
+    '28/08 - Quinta',
+    '29/08 - Sexta',
+    '30/08 - Sábado',
     'Localização'
   ];
 
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   logoutButton: {

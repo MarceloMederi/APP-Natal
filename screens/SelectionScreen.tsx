@@ -4,14 +4,14 @@ import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 const SelectionScreen = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Escolha uma opção:</Text>
+      <Text style={styles.title}>Escolha uma opção</Text>
 
       {/* Botão 1 - Ir para a tela de datas */}
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('Inicio')}
       >
-        <Text style={styles.buttonText}>Ver Itinerário</Text>
+        <Text style={styles.buttonText}>Ver Roteiro Completo</Text>
       </TouchableOpacity>
 
       {/* Botão 2 - Ir para a tela de restaurantes (MenuScreen) */}
@@ -27,7 +27,7 @@ const SelectionScreen = ({ navigation }: any) => {
         style={[styles.button, styles.logoutButton]}
         onPress={() => navigation.navigate('Login')}
       >
-        <Text style={styles.logoutText}>Logout</Text>
+        <Text style={styles.logoutText}>Sair do App</Text>
       </TouchableOpacity>
     </View>
   );
@@ -50,14 +50,14 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#F8BB3B',
     padding: 15,
-    marginVertical: 10,
+    marginVertical: 20,
     borderRadius: 8,
     width: '80%',
     alignItems: 'center',
   },
   buttonText: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   logoutButton: {

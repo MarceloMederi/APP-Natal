@@ -38,56 +38,56 @@ const DetailScreen = ({ route }: any) => {
 
 // Objeto de itinerários com imagens e botões específicos para cada data
 const itineraries: { [key: string]: { image: any; buttons: { text: string; link: string }[] } } = {
-  '23/08': {
+  '23/08 - Sábado': {
     image: require('../assets/images/dia-01.png'),
     buttons: [
       { text: 'PEDIR O UBER', link: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://play.google.com/store/apps/details%3Fid%3Dcom.ubercab%26hl%3Dpt_BR%26referrer%3Dutm_source%253Dgoogle%2526utm_medium%253Dorganic%2526utm_term%253Duber%26pcampaignid%3DAPPU_1_SZmwZ-LJF9rc1sQPteSQQA&ved=2ahUKEwiikuD35sWLAxVarpUCHTUyBAgQ8oQBegQIWxAB&usg=AOvVaw2HfffQ9CbAQ6VKRwmwzk88' },
       { text: 'ENDEREÇO HOTEL', link: 'https://maps.app.goo.gl/S2L8NVfK4bt5rQvT8' },
     ],
   },
-  '24/08': {
+  '24/08 - Domingo': {
     image: require('../assets/images/dia-02.png'),
     buttons : [
       { text: 'MAIS DETALHES', link: 'https://drive.google.com/file/d/1QIVGwVu_SMENk5P83fY_Jgw1Z9KmTUgh/view?usp=sharing' },
       { text: 'VÍDEO DO PASSEIO', link: 'https://youtu.be/cCYyYMzCwXo?si=iWovY5OQQ0GJznOs' },
     ],
   },
-  '25/08': {
+  '25/08 - Segunda': {
     image: require('../assets/images/dia-03.png'),
     buttons: [
       { text: ' PRAIA PONTA NEGRA', link: 'https://youtu.be/XJivDVYoe3s?si=JMlF32EvVJejaGPf' },
       { text: 'BEACH CLUB', link: 'https://youtube.com/shorts/WgM4xwBofHA?si=yk1aHNa2mS18s6rq' },
     ],
   },
-  '26/08': {
+  '26/08 - Terça': {
     image: require('../assets/images/dia-04.png'),
     buttons: [
       { text: 'MAIS DETALHES', link: 'https://drive.google.com/file/d/1NJ8t1qJHSJ7wI4o-CFKiN-jZdjbyq5bI/view?usp=sharing' },
       { text: 'VÍDEO DO PASSEIO', link: 'https://youtu.be/JU_gRjo_b3g?si=TtRCbeNyehXNHqSg' }
     ],
   },
-  '27/08': {
+  '27/08 - Quarta': {
     image: require('../assets/images/dia-05.png'),
     buttons: [
       { text: 'MAIS DETALHES', link: 'https://drive.google.com/file/d/1oQVYEMeflWnahaddhGVD-y6BgSIPuPce/view?usp=sharing' },
       { text: 'VÍDEO DO PASSEIO', link: 'https://youtu.be/zdAbklQ-his?si=zCoagkAJtp2bnLTh' },
     ],
   },
-  '28/08': {
+  '28/08 - Quinta': {
     image: require('../assets/images/dia-06.png'),
     buttons: [
       { text: 'ARTESANATO', link: 'https://youtu.be/CUZWoEoy95g?si=55O9SJQO6YqJQXRx' },
       { text: 'PRAIA SHOPPING', link: 'https://youtu.be/LmJxD9pQEZ4?si=ymbB4w_dGHmX9MhX' },
     ],
   },
-  '29/08': {
+  '29/08 - Sexta': {
     image: require('../assets/images/dia-07.png'),
     buttons: [
       { text: 'MAIS DETALHES', link: 'https://drive.google.com/file/d/1w0IEOYwSLt_cFQZz_rQPifV6k1EBeKOZ/view?usp=sharing' },
       { text: 'VÍDEO DO PASSEIO', link: 'https://youtu.be/rAaOmj7ZAsM?si=4Cwyfos-tT3s1JI-' },
     ],
   },
-  '30/08': {
+  '30/08 - Sábado': {
     image: require('../assets/images/dia-08.png'),
     buttons: [
       { text: 'PEDIR O UBER', link: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://play.google.com/store/apps/details%3Fid%3Dcom.ubercab%26hl%3Dpt_BR%26referrer%3Dutm_source%253Dgoogle%2526utm_medium%253Dorganic%2526utm_term%253Duber%26pcampaignid%3DAPPU_1_SZmwZ-LJF9rc1sQPteSQQA&ved=2ahUKEwiikuD35sWLAxVarpUCHTUyBAgQ8oQBegQIWxAB&usg=AOvVaw2HfffQ9CbAQ6VKRwmwzk88' },
