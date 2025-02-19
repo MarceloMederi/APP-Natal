@@ -20,16 +20,18 @@ expo-travel-itinerary/
 │   └── images/  # Pasta para armazenar imagens relacionadas às datas
 │
 ├── components/
-│   ├── DateButton.tsx  # Componente de botão para cada data
+│   └── DateButton.tsx  # Componente de botão para cada data
 │
 ├── navigation/
 │   └── AppNavigator.tsx  # Configuração de navegação entre telas
 │
 ├── screens/
-│   ├── LoginScreen.tsx  # Tela de login
-│   ├── HomeScreen.tsx  # Tela principal com os botões
 │   ├── DetailScreen.tsx  # Tela que exibe o conteúdo da data selecionada
-│   └── LocationScreen.tsx # Tela que exibe as localizaçoes do itinerario
+│   ├── HomeScreen.tsx  # Tela principal com os botões
+│   ├── LocationScreen.tsx # Tela que exibe as localizaçoes do itinerario
+│   ├── LoginScreen.tsx  # Tela de login
+│   ├── MenuScreen.tsx # Tela que exibe restaurante, passeios da cidade
+│   └── SelectionScreen.tsx # Tela que exibe as opçoes de intineratio que leva ao HomeScreen e MenuScreen
 │
 ├── app.json
 ├── app.tsx
@@ -97,6 +99,12 @@ Crie o arquivo `LocationScreen.tsx` em `screens/` para exibir as localizações 
 ### 4.5 Componente de Botão de Data
 Crie o arquivo `DateButton.tsx` em `components/` para facilitar a reutilização de botões.
 
+### 4.6 Componente de Menu (restaurante e feira de artesanato da cidade)
+Crie o arquivo `MenuScreen.tsx` em `components/` para inclusão das localidades de restaurante e passeios.
+
+### 4.7 Componente de Seleção
+Crie o arquivo `SelectionScreen.tsx` em `components/` para selecionar as opções 'Ver intinerario' e 'Ver cardapio'
+
 ### 5. Configurar Navegação
 Crie o arquivo `AppNavigator.tsx` em `navigation/` para configurar as rotas de navegação usando `react-navigation`.
 
@@ -124,11 +132,14 @@ npm start -- --reset-cache
    - Faça a validação (básica ou simulada, sem backend).
 
 2. Tela Principal:
-   - Exibe os botões das datas e localização.
+   - Exibe os botões 'Ver intinerario' e 'Ver cardapio'.
    - Inclui um botão de logout para retornar à tela de login.
 
-3. Tela de Detalhes:
-   - Exibe texto ou imagem baseado na data selecionada e a localização.
+3. Tela de Ver intinerario:
+   - Exibe as datas e imagem baseado na data selecionada e a localização.
+
+4. Tela de Ver cardapio:
+   - Exibe nome dos locais como restaurantes, feiras de artesanato.
 
 ---
 
