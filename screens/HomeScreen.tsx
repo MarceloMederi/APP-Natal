@@ -10,8 +10,7 @@ const HomeScreen = ({ navigation }: any) => {
     '27/08 - Quarta',
     '28/08 - Quinta',
     '29/08 - Sexta',
-    '30/08 - Sábado',
-    'Localização'
+    '30/08 - Sábado'
   ];
 
   const handlePress = (date: string) => {

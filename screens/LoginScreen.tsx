@@ -7,8 +7,8 @@ const LoginScreen = ({ navigation }: any) => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogin = () => {
-    const validUsername = 'VPN';
-    const validPassword = 'BFB';
+    const validUsername = 'partiu';
+    const validPassword = 'natal';
 
     if (username === validUsername && password === validPassword) {
       setErrorMessage('');

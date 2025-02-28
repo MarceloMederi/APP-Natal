@@ -4,8 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import LoginScreen from '../screens/LoginScreen';
 import HomeScreen from '../screens/HomeScreen';
-import DetailScreen from '../screens/DetailScreen';
-import LocationScreen from '../screens/LocationScreen'; 
+import DetailScreen from '../screens/DetailScreen'; 
 import SelectionScreen from '../screens/SelectionScreen';
 import MenuScreen from '../screens/MenuScreen'; 
 
@@ -21,7 +20,6 @@ const AppNavigator = () => {
         <Stack.Screen name="Cardapio" component={MenuScreen} />
         <Stack.Screen name="Inicio" component={HomeScreen} />
         <Stack.Screen name="Detalhes" component={DetailScreen} />
-        <Stack.Screen name="Localizacao" component={LocationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

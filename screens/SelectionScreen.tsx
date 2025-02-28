@@ -19,7 +19,7 @@ const SelectionScreen = ({ navigation }: any) => {
         style={styles.button}
         onPress={() => navigation.navigate('Cardapio')}
       >
-        <Text style={styles.buttonText}>Ver Restaurantes</Text>
+        <Text style={styles.buttonText}>Bares e Restaurantes</Text>
       </TouchableOpacity>
 
       {/* Botão de Logout */}
@@ -42,14 +42,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#077DB8',
   },
   title: {
-    fontSize: 22,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#FFFFFF',
     marginBottom: 20,
   },
   button: {
     backgroundColor: '#F8BB3B',
-    padding: 15,
+    padding: 18,
     marginVertical: 20,
     borderRadius: 8,
     width: '80%',
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   logoutText: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
 });
