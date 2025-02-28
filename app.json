@@ -3,13 +3,13 @@
     "name": "expo-travel-itinerary",
     "slug": "expo-travel-itinerary",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/images/capa.png",
-      "resizeMode": "cover",
+      "resizeMode": "contain",
       "backgroundColor": "#077DB8"
     },
     "ios": {
