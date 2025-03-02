@@ -1,23 +1,21 @@
 # Expo Travel Itinerary App
 
-## Descrição
-Este é um aplicativo desenvolvido com Expo que apresenta as seguintes funcionalidades:
-- Tela de login com autenticação de usuário e senha.
-- Após o login, uma tela com 10 botões é exibida:
-  - Um botão para deslogar do aplicativo.
-  - Oito botões representando as datas de 23/08 a 30/08.
-  - Um botão para localização das praias, hotel e aeroporto-RN
-- Ao clicar em um botão de data, é exibido um texto ou imagem relacionado à data selecionada (conteúdo a ser definido).
+## 📌 Descrição
+Este é um aplicativo desenvolvido com **Expo** que permite:
+- **Autenticação via login** com usuário e senha.
+- **Tela principal** com dois botões principais:
+  - **"Ver Itinerário"**: exibe as datas do itinerário de **23/08 a 30/08** com imagens e descrições.
+  - **"Ver Cardápio"**: exibe restaurantes e feiras de artesanato da cidade.
+  - **Botão de Logout** para sair do app.
 
 ---
 
-## Estrutura do Projeto
+## 📌 Estrutura do Projeto
 
 ```plaintext
 expo-travel-itinerary/
-├── App.js
 ├── assets/
-│   └── images/  # Pasta para armazenar imagens relacionadas às datas
+│   └── images/  # Pasta para armazenar imagens relacionadas às datas e localização
 │
 ├── components/
 │   └── DateButton.tsx  # Componente de botão para cada data
@@ -26,12 +24,13 @@ expo-travel-itinerary/
 │   └── AppNavigator.tsx  # Configuração de navegação entre telas
 │
 ├── screens/
+│   ├── AnimatedSplashScreen.tsx # Splash animada do app
 │   ├── DetailScreen.tsx  # Tela que exibe o conteúdo da data selecionada
-│   ├── HomeScreen.tsx  # Tela principal com os botões
-│   ├── LocationScreen.tsx # Tela que exibe as localizaçoes do itinerario
+│   ├── HomeScreen.tsx  # Tela principal com os botões de itinerário
+│   ├── LocationScreen.tsx # Tela que exibe as localizações no mapa
 │   ├── LoginScreen.tsx  # Tela de login
-│   ├── MenuScreen.tsx # Tela que exibe restaurante, passeios da cidade
-│   └── SelectionScreen.tsx # Tela que exibe as opçoes de intineratio que leva ao HomeScreen e MenuScreen
+│   ├── MenuScreen.tsx # Tela que exibe restaurantes e passeios da cidade
+│   ├── SelectionScreen.tsx # Tela intermediária que leva ao HomeScreen e MenuScreen
 │
 ├── app.json
 ├── app.tsx
@@ -44,7 +43,7 @@ expo-travel-itinerary/
 ```
 
 
-## Pré-requisitos
+## 📌 Pré-requisitos
 Certifique-se de ter o Expo CLI instalado no seu sistema:
 
 ```bash
@@ -53,22 +52,22 @@ npm install -g expo-cli
 
 ---
 
-## Passo a Passo para Configuração
+## 📌 Passo a Passo para Configuração
 
-### 1. Inicializar o Projeto Expo
+### 1️⃣ Inicializar o Projeto Expo
 
 ```bash
 expo init expo-travel-itinerary
 ```
 Escolha o template **"blank (TypeScript)"**.
 
-### 2. Navegar para o Diretório do Projeto
+### 2️⃣ Navegar para o Diretório do Projeto
 
 ```bash
 cd expo-travel-itinerary
 ```
 
-### 3. Instalar Dependências Necessárias
+### 3️⃣ Instalar Dependências
 
 Instale as bibliotecas de navegação e outros pacotes úteis:
 
@@ -82,87 +81,72 @@ Certifique-se de instalar os pacotes vinculados ao sistema:
 expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context react-native-vector-icons
 ```
 
-### 4. Criar Componentes
+## 📌 Criando Componentes
 
-#### 4.1 Tela de Login
-Crie o arquivo `LoginScreen.tsx` em `screens/` e implemente o formulário de login.
+### 1️⃣ **Tela de Login**
+Crie `LoginScreen.tsx` em `screens/` para autenticação do usuário.
 
-#### 4.2 Tela Principal
-Crie o arquivo `HomeScreen.tsx` em `screens/` para exibir os botões das datas e o botão de logout.
+### 2️⃣ **Tela Intermediária (Seleção de Opções)**
+Crie `SelectionScreen.tsx` para permitir que o usuário escolha entre **Ver Itinerário** ou **Ver Cardápio**.
 
-#### 4.3 Tela de Detalhes
-Crie o arquivo `DetailScreen.tsx` em `screens/` para exibir o texto ou imagem correspondente à data.
+### 3️⃣ **Tela Principal**
+Crie `HomeScreen.tsx` para exibir os **botões das datas** e **botão de localização**.
 
-#### 4.4 Componente de Botão de Localização
-Crie o arquivo `LocationScreen.tsx` em `screens/` para exibir as localizações no mapa.
+### 4️⃣ **Tela de Detalhes**
+Crie `DetailScreen.tsx` para exibir imagens e descrições dos dias do itinerário.
 
-### 4.5 Componente de Botão de Data
-Crie o arquivo `DateButton.tsx` em `components/` para facilitar a reutilização de botões.
+### 5️⃣ **Tela de Localização**
+Crie `LocationScreen.tsx` para abrir mapas do Google com os pontos turísticos.
 
-### 4.6 Componente de Menu (restaurante e feira de artesanato da cidade)
-Crie o arquivo `MenuScreen.tsx` em `components/` para inclusão das localidades de restaurante e passeios.
+### 6️⃣ **Tela de Cardápio**
+Crie `MenuScreen.tsx` para listar restaurantes e feiras da cidade.
 
-### 4.7 Componente de Seleção
-Crie o arquivo `SelectionScreen.tsx` em `components/` para selecionar as opções 'Ver intinerario' e 'Ver cardapio'
+### 7️⃣ **Splash Animada**
+Crie `AnimatedSplashScreen.tsx` para exibir uma animação de entrada ao abrir o app.
 
-### 5. Configurar Navegação
+### 8️⃣ **Configurar Navegação**
 Crie o arquivo `AppNavigator.tsx` em `navigation/` para configurar as rotas de navegação usando `react-navigation`.
 
-### 6. Configurar o Arquivo Principal
-No arquivo `App.tsx`, importe e configure o `AppNavigator`.
+### 9️⃣ **Configurar o Arquivo Principal**
+No arquivo `App.tsx`, importe e configure o `AppNavigator` e as configuraçoes da biblioteca Animated para carregamento da Splash.
 
 ---
 
-## Executar o Projeto
+## 📌 Executar o Projeto
 
-### 1. Iniciar o Servidor Expo
+### 1️⃣ Iniciar o Servidor Expo
 
 ```bash
 npm start -- --reset-cache
 ```
 
-### 2. Rodar no Dispositivo ou Emulador
-- Escaneie o QR Code exibido no terminal ou no navegador usando o aplicativo Expo Go.
+### 2️⃣ Rodar no Dispositivo ou Emulador
+- Escaneie o QR Code exibido no terminal ou no navegador usando o aplicativo **Expo Go**.
 
 ---
 
-## Funcionalidades Finais
-1. Tela de Login:
-   - Insira o usuário e senha.
-   - Faça a validação (básica ou simulada, sem backend).
+## 📌 Criar Build Android
+### 📍 **Gerar APK para Testes Locais**
+Gera um arquivo `.apk` que pode ser instalado diretamente no celular.
 
-2. Tela Principal:
-   - Exibe os botões 'Ver intinerario' e 'Ver cardapio'.
-   - Inclui um botão de logout para retornar à tela de login.
-
-3. Tela de Ver intinerario:
-   - Exibe as datas e imagem baseado na data selecionada e a localização.
-
-4. Tela de Ver cardapio:
-   - Exibe nome dos locais como restaurantes, feiras de artesanato.
-
----
-
-## Build do Aplicativo Android
-
-Faça o login na Expo caso não tenha feito.
+## 1️⃣ Faça o login na Expo caso não tenha feito.
 
 ```bash
 expo login
 ```
 
-## Instalar o EAS CLI
+## 2️⃣ Instalar o EAS CLI
 
 ```bash
 npm install -g eas-cli
 ```
 
-## Inicialize o EAS Build no projeto
+## 3️⃣ Inicialize o EAS Build no projeto
 
 ```bash
 eas build:configure
 ```
-## Criar a Build Android
+## 4️⃣ Criar a Build Android
 
 Para gerar um APK (para testes locais) ou AAB (para publicação na Google Play Store)
 
@@ -170,7 +154,7 @@ Para gerar um APK (para testes locais) ou AAB (para publicação na Google Play 
 eas build -p android
 ```
 
-## Baixar e Testar o APK
+## 5️⃣ Baixar e Testar o APK
 
 Após a conclusão do build, você receberá um link para baixar o APK ou AAB.
 
@@ -185,7 +169,7 @@ Para AAB:
 - Acesse o Google Play Console.
 - Envie o AAB para o canal de teste interno ou produção.
 
-## Caso queira um APK de development usar o comando abaixo
+## 6️⃣ Caso queira um APK de development usar o comando abaixo
 Inclui ferramentas para testes e desenvolvimento (como conexão com o Expo Go e debug remoto).
 Não é destinado a ser um app independente ou para distribuição.
 
@@ -193,7 +177,7 @@ Não é destinado a ser um app independente ou para distribuição.
 eas build -p android --profile development
 ```
 
-## Caso queira um APK de produção o comando abaixo
+## 7️⃣ Caso queira um APK de produção o comando abaixo
 Cria uma build standalone (APK ou AAB) que funciona como um aplicativo completo e não depende do Expo Go.
 Destinado a ser um app independente ou para distribuição.
 
@@ -201,7 +185,7 @@ Destinado a ser um app independente ou para distribuição.
 eas build -p android --profile preview
 ```
 
-## Gerar AAB para Publicação
+## 8️⃣Gerar AAB para Publicação
 Se você pretende publicar o app na Google Play Store, use o comando:
 
 ```bash
