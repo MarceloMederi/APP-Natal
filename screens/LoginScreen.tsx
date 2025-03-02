@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useState, useRef } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Animated, Image } from 'react-native';
 
 const LoginScreen = ({ navigation }: any) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const fadeAnim = useRef(new Animated.Value(1)).current; // Inicializa a opacidade em 1
 
   const handleLogin = () => {
     const validUsername = 'partiu';
@@ -12,14 +13,24 @@ const LoginScreen = ({ navigation }: any) => {
 
     if (username === validUsername && password === validPassword) {
       setErrorMessage('');
-      navigation.navigate('Selecao');
+      
+      // 🚀 Inicia o efeito de fade-out
+      Animated.timing(fadeAnim, {
+        toValue: 0, // Reduz a opacidade para 0 (fade-out)
+        duration: 500, // Duração de meio segundo
+        useNativeDriver: true,
+      }).start(() => {
+        navigation.navigate('Selecao'); // Navega para a próxima tela após a animação
+      });
+
     } else {
       setErrorMessage('Usuário ou senha inválidos!');
     }
   };
 
   return (
-    <View style={styles.container}>
+    <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
+      <Image source={require('../assets/images/capa.png')} style={styles.image} />
       <Text style={styles.title}>Bem-vindo!</Text>
       <Text style={styles.subtitle}>Faça login para continuar</Text>
 
@@ -44,7 +55,7 @@ const LoginScreen = ({ navigation }: any) => {
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
-    </View>
+    </Animated.View>
   );
 };
 
@@ -55,6 +66,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#077DB8',
     padding: 20,
+  },
+  image: {
+    width: 200, // 🔥 Ajuste conforme necessário
+    height: 200,
+    marginBottom: 20, // 🔥 Adiciona espaçamento abaixo da imagem
+    resizeMode: 'contain',
   },
   title: {
     fontSize: 35,
