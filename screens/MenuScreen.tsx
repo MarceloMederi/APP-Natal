@@ -5,10 +5,12 @@ const MenuScreen = ({ navigation }: any) => {
   // Lista de restaurantes com links
   const restaurants = [
     { id: 1, name: 'Restaurante - Camarões', url: 'https://drive.google.com/file/d/1JeW2CBQT4WLNn9wlLv-ARYEVtnt_fbrO/view?usp=sharing' },
-    { id: 2, name: 'Restaurante - Casa de Taipa', url: '#' },
+    { id: 2, name: 'Restaurante - Casa de Taipa', url: 'https://drive.google.com/file/d/1Vp5NdKudCti6XVwF4LfKOucr0H45gU-1/view?usp=sharing' },
     { id: 3, name: 'Restaurante - Casa do Matuto', url: 'https://drive.google.com/file/d/1RyWRbrJ-ec2r7yW9l4ewT5uBev56l2EF/view?usp=sharing' },
-    { id: 4, name: 'Barzinho - Curió Bar', url: 'https://drive.google.com/file/d/1MFqgXG0HMXG_cB6M9fgASL_Op7OnLfbg/view?usp=sharing' },
-    { id: 5, name: 'Barzinho - Oxe Bar', url: '#' },
+    { id: 4, name: 'Restaurante - Páprika', url: 'https://b2f.app/paprikasalao?fbclid=PAZXh0bgNhZW0CMTEAAabULk_huoiP_SGntOGwBkLHV3hr9bk5K_g_qXvluFKVKbOMnHUaA-xPvm4_aem_8AKJG60YGOb7RgPwFUbfuQ' },
+    { id: 5, name: 'Barzinho - Curió Bar', url: 'https://drive.google.com/file/d/1MFqgXG0HMXG_cB6M9fgASL_Op7OnLfbg/view?usp=sharing' },
+    { id: 6, name: 'Barzinho - Boteco Arrumadinho', url: 'https://drive.google.com/file/d/192ou5h3QyNDfddmNR_wvM5wnbA3883qa/view?usp=sharing' },
+    { id: 7, name: 'Barzinho - Ô Fuxico Bar', url: 'https://drive.google.com/file/d/1V-oOvEiMd7X9vNoh4AOHUlsoZ7bSzYKo/view?usp=sharing' },
   ];
 
   // Função para abrir o link do restaurante
